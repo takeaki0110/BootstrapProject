@@ -440,41 +440,61 @@
                     </ul>
                     <small class="d-block mb-3 text-muted">&copy; 20XX SKY TRAVEL co.,ltd.</small>
                 </div>
-<div class="col-6 col-md">
-    <h5 class="font-weight-bold text-muted pl-3">サービス</h5>
-    <ul class="list-group list-group-flush list-unstyled text-left mt-3 mb-4">
-        <li><a class="text-muted list-group-item" href="#">格安航空券</a></li>
-        <li><a class="text-muted list-group-item" href="#">コース案内</a></li>
-        <li><a class="text-muted list-group-item" href="#">提携ホテル</a></li>
-        <li><a class="text-muted list-group-item" href="#">Wi-Fiレンタル</a></li>
-        <li><a class="text-muted list-group-item" href="#">オプション</a></li>
-        <li><a class="text-muted list-group-item" href="#">都市情報</a></li>
-    </ul>
-</div>
-<div class="col-6 col-md">
-    <h5 class="font-weight-bold text-muted pl-3">インフォメーション</h5>
-    <ul class="list-group list-group-flush list-unstyled text-left mt-3 mb-4">
-        <li><a class="text-muted list-group-item" href="#">サイトマップ</a></li>
-        <li><a class="text-muted list-group-item" href="#">サイト利用について</a></li>
-        <li><a class="text-muted list-group-item" href="#">よくある質問</a></li>
-        <li><a class="text-muted list-group-item" href="#">不具合・お問合せ</a></li>
-    </ul>
-</div>
-<div class="col-6 col-md">
-    <h5 class="font-weight-bold text-muted pl-3">メディア</h5>
-    <ul class="list-group list-group-flush list-unstyled text-left mt-3 mb-4">
-        <li><a class="text-muted list-group-item" href="#">プレス</a></li>
-        <li><a class="text-muted list-group-item" href="#">テレビCM情報</a></li>
-        <li><a class="text-muted list-group-item" href="#">広告/参画</a></li>
-        <li><a class="text-muted list-group-item" href="#">プライバシーポリシー</a></li>
-    </ul>
-</div>
+                <div class="col-6 col-md">
+                    <h5 class="font-weight-bold text-muted pl-3">サービス</h5>
+                    <ul class="list-group list-group-flush list-unstyled text-left mt-3 mb-4">
+                        <li><a class="text-muted list-group-item" href="#">格安航空券</a></li>
+                        <li><a class="text-muted list-group-item" href="#">コース案内</a></li>
+                        <li><a class="text-muted list-group-item" href="#">提携ホテル</a></li>
+                        <li><a class="text-muted list-group-item" href="#">Wi-Fiレンタル</a></li>
+                        <li><a class="text-muted list-group-item" href="#">オプション</a></li>
+                        <li><a class="text-muted list-group-item" href="#">都市情報</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5 class="font-weight-bold text-muted pl-3">インフォメーション</h5>
+                    <ul class="list-group list-group-flush list-unstyled text-left mt-3 mb-4">
+                        <li><a class="text-muted list-group-item" href="#">サイトマップ</a></li>
+                        <li><a class="text-muted list-group-item" href="#">サイト利用について</a></li>
+                        <li><a class="text-muted list-group-item" href="#">よくある質問</a></li>
+                        <li><a class="text-muted list-group-item" href="#">不具合・お問合せ</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5 class="font-weight-bold text-muted pl-3">メディア</h5>
+                    <ul class="list-group list-group-flush list-unstyled text-left mt-3 mb-4">
+                        <li><a class="text-muted list-group-item" href="#">プレス</a></li>
+                        <li><a class="text-muted list-group-item" href="#">テレビCM情報</a></li>
+                        <li><a class="text-muted list-group-item" href="#">広告/参画</a></li>
+                        <li><a class="text-muted list-group-item" href="#">プライバシーポリシー</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/holder.min.js"></script>
+    <script>
+        $(function() {
+        var topBtn = $('#backbtn');
+        topBtn.hide();
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 500) {
+                topBtn.fadeIn();
+            } else {
+                topBtn.fadeOut();
+            }
+        });
+        topBtn.click(function () {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 500);
+            return false;
+        });
+    });
+</script>
+    <button type="button" class="btn btn-primary" id="backbtn">トップに戻る <span class="badge badge-light"><i class="fa fa-arrow-up"></i></span></button></button>
 </body>
 
 </html>
